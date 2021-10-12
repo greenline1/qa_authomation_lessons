@@ -14,10 +14,7 @@ Part 4
 
 print("Task 1".center(50, '-'))
 print("[-] Creating a product specification dictionary")
-d = {}
-d['title'] = 'mint jelly'
-d['price'] = 3
-d['ingredients'] = ['corn syrup', 'water', 'natural mint flavor']
+d = {'title': 'mint jelly', 'price': 3, 'ingredients': ['corn syrup', 'water', 'natural mint flavor']}
 
 print("Created dictionary: \n", d)
 
@@ -43,5 +40,5 @@ print(len(d['ingredients']))
 
 print("Task 6".center(50, '-'))
 print("[-] Removing the value with the \"description\" key from the dictionary...")
-del(d['description'])
+d.pop('description')
 print("Updated dictionary: \n", d)

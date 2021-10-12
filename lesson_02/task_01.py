@@ -10,7 +10,7 @@ Tip: use strings methods
 3. Count the number of dots in a string
 4. Create string with text "Homework". Modify it in a string with  100 character length with "Homework" in the middle
 and pad it with spaces from the both sides. Display the length of new string.
-5. Modify string to UPPERCASE
+5. Modify first symbols of words to upper case
 6. Check if string ends with "ing"
 7. Find the index of first occurrence of "a" character in the string
 8. Divide string on the list of subsrings by space symbol
@@ -48,7 +48,7 @@ def main(argv):
 
     print("Task 5")
     print("Modifying string to UPPERCASE")
-    print(input_string.upper())
+    print(input_string.casefold())
     print("\n")
 
     print("Task 6")

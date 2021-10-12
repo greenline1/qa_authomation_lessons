@@ -49,8 +49,8 @@ word_list.insert(len(word_list)//2, 'Hello')
 print("Updated word list: \n", word_list)
 
 print("Task 6".center(50, '-'))
-print("[-] Inserting another word ('Hello') in the middle of the list...")
-word_list.insert(len(word_list)//2, 'Hello')
+print("[-] Remove first word of the list...")
+word_list = word_list.pop(0)
 print("Updated word list: \n", word_list)
 
 print("Task 7".center(50, '-'))

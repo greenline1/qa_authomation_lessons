@@ -61,7 +61,7 @@ try:
 except ValueError:
     print("[x] Value error!")
     exit(1)
-print(int(str(f).split(".")[1]))
+print(f % 1)
 print("\n")
 
 print("Task 6".center(50, '-'))
