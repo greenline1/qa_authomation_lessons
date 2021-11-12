@@ -54,6 +54,7 @@ class TestLesson03(unittest.TestCase):
         sides = ("a", "b", "c")
         self.assertEqual(find_triangle_type(*sides), "Not a triangle")
 
+
 class TestLesson05(unittest.TestCase):
     def setUp(self):
         self.emp = ITEmployee("Jack Sparrow")
@@ -74,6 +75,7 @@ class TestLesson05(unittest.TestCase):
     def test_add_one_skill(self):
         self.emp.add_skill(['git'])
         self.assertIn('git', self.emp.skills)
+
 
 if __name__ == '__main__':
     unittest.main()
