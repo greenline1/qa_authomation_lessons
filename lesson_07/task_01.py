@@ -1,6 +1,7 @@
 import unittest
 from lesson_03.task_03 import is_year_leap
 from lesson_03.task_04 import is_triangle, find_triangle_type
+from lesson_05.task_01 import ITEmployee
 
 
 class TestLesson03(unittest.TestCase):
@@ -53,6 +54,26 @@ class TestLesson03(unittest.TestCase):
         sides = ("a", "b", "c")
         self.assertEqual(find_triangle_type(*sides), "Not a triangle")
 
+class TestLesson05(unittest.TestCase):
+    def setUp(self):
+        self.emp = ITEmployee("Jack Sparrow")
+
+    def test_name(self):
+        self.assertEqual(self.emp.fullname, full_name="Jack Sparrow", year_of_birth=1970)
+
+    def test_no_position(self):
+        self.assertIsNone(self.emp.position)
+
+    def test_no_skills(self):
+        self.assertEqual(len(self.emp.skills), 0)
+
+    def test_add_position(self):
+        self.emp.set_position('QA engineer')
+        self.assertEqual(self.emp.position, 'QA engineer')
+
+    def test_add_one_skill(self):
+        self.emp.add_skill(['git'])
+        self.assertIn('git', self.emp.skills)
 
 if __name__ == '__main__':
     unittest.main()
