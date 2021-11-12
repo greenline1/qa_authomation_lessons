@@ -14,7 +14,7 @@ def is_triangle(a: float, b: float, c: float) -> bool:
 def verify_triangle_sides(a: float, b: float, c: float) -> bool:
     """Verify if triangle sides are floats"""
     try:
-        a, b, c = float(side_1), float(side_2), float(side_3)
+        a, b, c = float(a), float(b), float(c)
         return True
     except ValueError:
         print("Incorrect input of the triangle sides\n", sep="")
