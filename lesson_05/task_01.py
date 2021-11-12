@@ -8,7 +8,7 @@ class Person:
         """Constructor for a Person class"""
         self.year_of_birth = year_of_birth
         self.fullname = fullname
-        if year_of_birth < 1900 or year_of_birth > datetime.now().year:
+        if year_of_birth is not None and (year_of_birth < 1900 or year_of_birth > datetime.now().year):
             raise ValueError('Year of birth is not between 1900 and current year')
         if len(self.fullname.strip().split()) != 2:
             raise ValueError('Fullname should consist of Firstname and Lastname')
@@ -36,9 +36,11 @@ class Person:
 class Employee(Person):
     """Create an Employee object"""
 
-    def __init__(self, fullname='', year_of_birth=None, position='', experience=0, salary=0):
+    def __init__(self, fullname='', year_of_birth=None, position=None, experience=0, salary=0):
         Person.__init__(self, fullname, year_of_birth)
         self.position = position
+        if self.position is None:
+            self.position = []
         self.experience = experience
         self.salary = salary
 
